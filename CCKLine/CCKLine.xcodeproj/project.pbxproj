@@ -19,6 +19,8 @@
 		CCF32FCB26BA703600CAA5FC /* CCKLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FCA26BA703600CAA5FC /* CCKLineUITests.m */; };
 		CCF32FDB26BA717800CAA5FC /* CCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FDA26BA717800CAA5FC /* CCChartViewController.m */; };
 		CCF32FDF26BA802D00CAA5FC /* UIColor+CCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FDE26BA802D00CAA5FC /* UIColor+CCKLine.m */; };
+		CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FE126BA8A4300CAA5FC /* CCChartView.m */; };
+		CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FE426BA8BA500CAA5FC /* CCChartSegmentView.m */; };
 		FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,10 @@
 		CCF32FDA26BA717800CAA5FC /* CCChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartViewController.m; sourceTree = "<group>"; };
 		CCF32FDD26BA802D00CAA5FC /* UIColor+CCKLine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+CCKLine.h"; sourceTree = "<group>"; };
 		CCF32FDE26BA802D00CAA5FC /* UIColor+CCKLine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CCKLine.m"; sourceTree = "<group>"; };
+		CCF32FE026BA8A4300CAA5FC /* CCChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartView.h; sourceTree = "<group>"; };
+		CCF32FE126BA8A4300CAA5FC /* CCChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartView.m; sourceTree = "<group>"; };
+		CCF32FE326BA8BA500CAA5FC /* CCChartSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartSegmentView.h; sourceTree = "<group>"; };
+		CCF32FE426BA8BA500CAA5FC /* CCChartSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartSegmentView.m; sourceTree = "<group>"; };
 		E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.release.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +191,10 @@
 			children = (
 				CCF32FD926BA717800CAA5FC /* CCChartViewController.h */,
 				CCF32FDA26BA717800CAA5FC /* CCChartViewController.m */,
+				CCF32FE026BA8A4300CAA5FC /* CCChartView.h */,
+				CCF32FE126BA8A4300CAA5FC /* CCChartView.m */,
+				CCF32FE326BA8BA500CAA5FC /* CCChartSegmentView.h */,
+				CCF32FE426BA8BA500CAA5FC /* CCChartSegmentView.m */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -402,8 +412,10 @@
 				CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */,
 				CCF32FDB26BA717800CAA5FC /* CCChartViewController.m in Sources */,
 				CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */,
+				CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FDF26BA802D00CAA5FC /* UIColor+CCKLine.m in Sources */,
+				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

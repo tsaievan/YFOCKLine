@@ -6,6 +6,7 @@
 //
 
 #import "CCChartViewController.h"
+#import "UIColor+CCKLine.h"
 
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -26,6 +27,7 @@ static void blockCleanUp(__strong void(^*block)(void)) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.backgroundColor;
 }
 
 - (UIActivityIndicatorView *)indicatorView {
