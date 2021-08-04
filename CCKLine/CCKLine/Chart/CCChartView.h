@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CCChartSegmentView.h"
+#import "CCKLineRootModel.h"
+#import "CCKLineConstant.h"
 
 @protocol CCChartViewDataSource <NSObject>
 - (void)stockDatasWithIndex:(NSInteger)index;
@@ -18,7 +20,12 @@
 - (instancetype)initWithItemModels:(NSArray *)itemModels;
 /// 数据源
 @property (nonatomic, weak) id <CCChartViewDataSource> dataSource;
+- (void)reloadWithData:(CCKLineRootModel *)rootModel;
+@end
 
-
+@interface CCChartViewItemModel : NSObject
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) CCKLineType centerViewType;
++ (instancetype)itemModelWithTitle:(NSString *)title type:(CCKLineType)type;
 @end
 

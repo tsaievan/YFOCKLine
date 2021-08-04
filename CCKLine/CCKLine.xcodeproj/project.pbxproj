@@ -21,6 +21,8 @@
 		CCF32FDF26BA802D00CAA5FC /* UIColor+CCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FDE26BA802D00CAA5FC /* UIColor+CCKLine.m */; };
 		CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FE126BA8A4300CAA5FC /* CCChartView.m */; };
 		CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FE426BA8BA500CAA5FC /* CCChartSegmentView.m */; };
+		CCF32FE926BA940300CAA5FC /* CCKLineRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FE826BA940300CAA5FC /* CCKLineRootModel.m */; };
+		CCF32FEC26BA95C100CAA5FC /* CCKLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FEB26BA95C100CAA5FC /* CCKLineModel.m */; };
 		FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,11 @@
 		CCF32FE126BA8A4300CAA5FC /* CCChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartView.m; sourceTree = "<group>"; };
 		CCF32FE326BA8BA500CAA5FC /* CCChartSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartSegmentView.h; sourceTree = "<group>"; };
 		CCF32FE426BA8BA500CAA5FC /* CCChartSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartSegmentView.m; sourceTree = "<group>"; };
+		CCF32FE726BA940300CAA5FC /* CCKLineRootModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineRootModel.h; sourceTree = "<group>"; };
+		CCF32FE826BA940300CAA5FC /* CCKLineRootModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineRootModel.m; sourceTree = "<group>"; };
+		CCF32FEA26BA95C100CAA5FC /* CCKLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineModel.h; sourceTree = "<group>"; };
+		CCF32FEB26BA95C100CAA5FC /* CCKLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineModel.m; sourceTree = "<group>"; };
+		CCF32FEF26BA9A1E00CAA5FC /* CCKLineConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineConstant.h; sourceTree = "<group>"; };
 		E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.release.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +160,8 @@
 		CCF32FA226BA703400CAA5FC /* CCKLine */ = {
 			isa = PBXGroup;
 			children = (
+				CCF32FED26BA99F400CAA5FC /* Config */,
+				CCF32FE626BA93ED00CAA5FC /* Model */,
 				CCF32FDC26BA7FF600CAA5FC /* Theme */,
 				CCF32FD826BA714E00CAA5FC /* Chart */,
 				CCF32FA326BA703400CAA5FC /* AppDelegate.h */,
@@ -206,6 +215,33 @@
 				CCF32FDE26BA802D00CAA5FC /* UIColor+CCKLine.m */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		CCF32FE626BA93ED00CAA5FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCF32FE726BA940300CAA5FC /* CCKLineRootModel.h */,
+				CCF32FE826BA940300CAA5FC /* CCKLineRootModel.m */,
+				CCF32FEA26BA95C100CAA5FC /* CCKLineModel.h */,
+				CCF32FEB26BA95C100CAA5FC /* CCKLineModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCF32FED26BA99F400CAA5FC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CCF32FEE26BA9A0500CAA5FC /* Constant */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CCF32FEE26BA9A0500CAA5FC /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CCF32FEF26BA9A1E00CAA5FC /* CCKLineConstant.h */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +448,8 @@
 				CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */,
 				CCF32FDB26BA717800CAA5FC /* CCChartViewController.m in Sources */,
 				CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */,
+				CCF32FE926BA940300CAA5FC /* CCKLineRootModel.m in Sources */,
+				CCF32FEC26BA95C100CAA5FC /* CCKLineModel.m in Sources */,
 				CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FDF26BA802D00CAA5FC /* UIColor+CCKLine.m in Sources */,

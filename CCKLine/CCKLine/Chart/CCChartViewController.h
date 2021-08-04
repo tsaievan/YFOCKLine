@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CCChartViewController : UIViewController
 
+@property (nonatomic, assign) BOOL needPortrait;
+
 @end
 
 NS_ASSUME_NONNULL_END
