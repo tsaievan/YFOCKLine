@@ -1,0 +1,18 @@
+platform :ios, '9.0'
+
+target 'CCKLine' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+pod 'Masonry'
+  # Pods for CCKLine
+
+  target 'CCKLineTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CCKLineUITests' do
+    # Pods for testing
+  end
+
+end

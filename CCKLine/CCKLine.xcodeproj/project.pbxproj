@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692AFFB49C80625D57F04282 /* libPods-CCKLineTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB2B844266C034271A925D3 /* libPods-CCKLineTests.a */; };
+		99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */; };
 		CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FA426BA703400CAA5FC /* AppDelegate.m */; };
 		CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FAA26BA703400CAA5FC /* ViewController.m */; };
 		CCF32FAE26BA703400CAA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF32FAC26BA703400CAA5FC /* Main.storyboard */; };
@@ -16,6 +18,7 @@
 		CCF32FC026BA703600CAA5FC /* CCKLineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FBF26BA703600CAA5FC /* CCKLineTests.m */; };
 		CCF32FCB26BA703600CAA5FC /* CCKLineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FCA26BA703600CAA5FC /* CCKLineUITests.m */; };
 		CCF32FDB26BA717800CAA5FC /* CCChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FDA26BA717800CAA5FC /* CCChartViewController.m */; };
+		FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCKLine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0920BC98AE793320307E8039 /* Pods-CCKLine-CCKLineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.debug.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B4B0D0B496C2107713ABD4C /* Pods-CCKLine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine.release.xcconfig"; path = "Target Support Files/Pods-CCKLine/Pods-CCKLine.release.xcconfig"; sourceTree = "<group>"; };
+		1BB2B844266C034271A925D3 /* libPods-CCKLineTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCKLineTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCKLine-CCKLineUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A65142B527D494854C8901F /* Pods-CCKLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine.debug.xcconfig"; path = "Target Support Files/Pods-CCKLine/Pods-CCKLine.debug.xcconfig"; sourceTree = "<group>"; };
+		A229098584A4AA1C632B83CD /* Pods-CCKLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLineTests.release.xcconfig"; path = "Target Support Files/Pods-CCKLineTests/Pods-CCKLineTests.release.xcconfig"; sourceTree = "<group>"; };
+		C03A88150CCDBF31659D97B4 /* Pods-CCKLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLineTests.debug.xcconfig"; path = "Target Support Files/Pods-CCKLineTests/Pods-CCKLineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCF32FA026BA703400CAA5FC /* CCKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF32FA326BA703400CAA5FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF32FA426BA703400CAA5FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +65,7 @@
 		CCF32FCC26BA703600CAA5FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCF32FD926BA717800CAA5FC /* CCChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCChartViewController.h; sourceTree = "<group>"; };
 		CCF32FDA26BA717800CAA5FC /* CCChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCChartViewController.m; sourceTree = "<group>"; };
+		E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.release.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692AFFB49C80625D57F04282 /* libPods-CCKLineTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +89,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50EF8427AC21D7EDA02D43DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */,
+				67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */,
+				1BB2B844266C034271A925D3 /* libPods-CCKLineTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9DC5DB1781E715B606DE5C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A65142B527D494854C8901F /* Pods-CCKLine.debug.xcconfig */,
+				1B4B0D0B496C2107713ABD4C /* Pods-CCKLine.release.xcconfig */,
+				0920BC98AE793320307E8039 /* Pods-CCKLine-CCKLineUITests.debug.xcconfig */,
+				E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */,
+				C03A88150CCDBF31659D97B4 /* Pods-CCKLineTests.debug.xcconfig */,
+				A229098584A4AA1C632B83CD /* Pods-CCKLineTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CCF32F9726BA703400CAA5FC = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +127,8 @@
 				CCF32FBE26BA703600CAA5FC /* CCKLineTests */,
 				CCF32FC926BA703600CAA5FC /* CCKLineUITests */,
 				CCF32FA126BA703400CAA5FC /* Products */,
+				C9DC5DB1781E715B606DE5C2 /* Pods */,
+				50EF8427AC21D7EDA02D43DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCF32FCF26BA703600CAA5FC /* Build configuration list for PBXNativeTarget "CCKLine" */;
 			buildPhases = (
+				2209CAE997A0A4078F21A7C7 /* [CP] Check Pods Manifest.lock */,
 				CCF32F9C26BA703400CAA5FC /* Sources */,
 				CCF32F9D26BA703400CAA5FC /* Frameworks */,
 				CCF32F9E26BA703400CAA5FC /* Resources */,
@@ -169,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCF32FD226BA703600CAA5FC /* Build configuration list for PBXNativeTarget "CCKLineTests" */;
 			buildPhases = (
+				EADD3183E0A5F966D2113455 /* [CP] Check Pods Manifest.lock */,
 				CCF32FB726BA703600CAA5FC /* Sources */,
 				CCF32FB826BA703600CAA5FC /* Frameworks */,
 				CCF32FB926BA703600CAA5FC /* Resources */,
@@ -187,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCF32FD526BA703600CAA5FC /* Build configuration list for PBXNativeTarget "CCKLineUITests" */;
 			buildPhases = (
+				1EA8FE9072804297D298775D /* [CP] Check Pods Manifest.lock */,
 				CCF32FC226BA703600CAA5FC /* Sources */,
 				CCF32FC326BA703600CAA5FC /* Frameworks */,
 				CCF32FC426BA703600CAA5FC /* Resources */,
@@ -268,6 +312,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EA8FE9072804297D298775D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCKLine-CCKLineUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2209CAE997A0A4078F21A7C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCKLine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EADD3183E0A5F966D2113455 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCKLineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCF32F9C26BA703400CAA5FC /* Sources */ = {
@@ -446,6 +559,7 @@
 		};
 		CCF32FD026BA703600CAA5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A65142B527D494854C8901F /* Pods-CCKLine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +577,7 @@
 		};
 		CCF32FD126BA703600CAA5FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B4B0D0B496C2107713ABD4C /* Pods-CCKLine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -480,6 +595,7 @@
 		};
 		CCF32FD326BA703600CAA5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03A88150CCDBF31659D97B4 /* Pods-CCKLineTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -499,6 +615,7 @@
 		};
 		CCF32FD426BA703600CAA5FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A229098584A4AA1C632B83CD /* Pods-CCKLineTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -518,6 +635,7 @@
 		};
 		CCF32FD626BA703600CAA5FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0920BC98AE793320307E8039 /* Pods-CCKLine-CCKLineUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CCKLineUITests/Info.plist;
@@ -535,6 +653,7 @@
 		};
 		CCF32FD726BA703600CAA5FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CCKLineUITests/Info.plist;
