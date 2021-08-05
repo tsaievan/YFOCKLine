@@ -23,6 +23,7 @@
 		CCF32FFD26BBDCFF00CAA5FC /* UIColor+CCKLine.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FF726BBDCFF00CAA5FC /* UIColor+CCKLine.m */; };
 		CCF32FFE26BBDCFF00CAA5FC /* CCKLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FFB26BBDCFF00CAA5FC /* CCKLineModel.m */; };
 		CCF32FFF26BBDCFF00CAA5FC /* CCKLineRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */; };
+		CCF3300226BBDE6500CAA5FC /* CCKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3300126BBDE6500CAA5FC /* CCKLineView.m */; };
 		FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		CCF32FFA26BBDCFF00CAA5FC /* CCKLineRootModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCKLineRootModel.h; sourceTree = "<group>"; };
 		CCF32FFB26BBDCFF00CAA5FC /* CCKLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKLineModel.m; sourceTree = "<group>"; };
 		CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKLineRootModel.m; sourceTree = "<group>"; };
+		CCF3300026BBDE6500CAA5FC /* CCKLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineView.h; sourceTree = "<group>"; };
+		CCF3300126BBDE6500CAA5FC /* CCKLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineView.m; sourceTree = "<group>"; };
 		E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.release.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +214,8 @@
 			children = (
 				CCF32FF226BBDCFF00CAA5FC /* Config */,
 				CCF32FF826BBDCFF00CAA5FC /* Model */,
+				CCF3300026BBDE6500CAA5FC /* CCKLineView.h */,
+				CCF3300126BBDE6500CAA5FC /* CCKLineView.m */,
 			);
 			path = KLine;
 			sourceTree = "<group>";
@@ -245,8 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				CCF32FF926BBDCFF00CAA5FC /* CCKLineModel.h */,
-				CCF32FFA26BBDCFF00CAA5FC /* CCKLineRootModel.h */,
 				CCF32FFB26BBDCFF00CAA5FC /* CCKLineModel.m */,
+				CCF32FFA26BBDCFF00CAA5FC /* CCKLineRootModel.h */,
 				CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */,
 			);
 			path = Model;
@@ -453,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF3300226BBDE6500CAA5FC /* CCKLineView.m in Sources */,
 				CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */,
 				CCF32FFD26BBDCFF00CAA5FC /* UIColor+CCKLine.m in Sources */,
 				CCF32FFF26BBDCFF00CAA5FC /* CCKLineRootModel.m in Sources */,
