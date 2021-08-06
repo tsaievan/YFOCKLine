@@ -5,7 +5,7 @@
 //  Created by 蔡一凡 on 2021/8/5.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 @class CCKLineModel;
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *K;
 @property (nonatomic, strong) NSNumber *D;
 @property (nonatomic, strong) NSNumber *J;
+@property (nonatomic, strong) NSNumber *RSV;
 + (void)calKDJWithData:(NSArray <CCKLineModel *> *)datas params:(NSArray *)params;
 @end
 
