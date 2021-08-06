@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		692AFFB49C80625D57F04282 /* libPods-CCKLineTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB2B844266C034271A925D3 /* libPods-CCKLineTests.a */; };
 		99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */; };
+		CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */; };
 		CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FA426BA703400CAA5FC /* AppDelegate.m */; };
 		CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FAA26BA703400CAA5FC /* ViewController.m */; };
 		CCF32FAE26BA703400CAA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF32FAC26BA703400CAA5FC /* Main.storyboard */; };
@@ -24,6 +25,8 @@
 		CCF32FFE26BBDCFF00CAA5FC /* CCKLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FFB26BBDCFF00CAA5FC /* CCKLineModel.m */; };
 		CCF32FFF26BBDCFF00CAA5FC /* CCKLineRootModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */; };
 		CCF3300226BBDE6500CAA5FC /* CCKLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3300126BBDE6500CAA5FC /* CCKLineView.m */; };
+		CCF3300526BBEE4700CAA5FC /* CCIndicatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3300426BBEE4700CAA5FC /* CCIndicatorModel.m */; };
+		CCF3300826BBF41900CAA5FC /* CCMinMaxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF3300726BBF41900CAA5FC /* CCMinMaxModel.m */; };
 		FF85320C4155960D08BE27D0 /* libPods-CCKLine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 049A25AA5C9096A4A2462101 /* libPods-CCKLine.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +56,8 @@
 		9A65142B527D494854C8901F /* Pods-CCKLine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine.debug.xcconfig"; path = "Target Support Files/Pods-CCKLine/Pods-CCKLine.debug.xcconfig"; sourceTree = "<group>"; };
 		A229098584A4AA1C632B83CD /* Pods-CCKLineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLineTests.release.xcconfig"; path = "Target Support Files/Pods-CCKLineTests/Pods-CCKLineTests.release.xcconfig"; sourceTree = "<group>"; };
 		C03A88150CCDBF31659D97B4 /* Pods-CCKLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLineTests.debug.xcconfig"; path = "Target Support Files/Pods-CCKLineTests/Pods-CCKLineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1DDA1D26BCE2F1008B493F /* CCKLineGlobalVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineGlobalVariable.h; sourceTree = "<group>"; };
+		CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineGlobalVariable.m; sourceTree = "<group>"; };
 		CCF32FA026BA703400CAA5FC /* CCKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF32FA326BA703400CAA5FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF32FA426BA703400CAA5FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +89,10 @@
 		CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCKLineRootModel.m; sourceTree = "<group>"; };
 		CCF3300026BBDE6500CAA5FC /* CCKLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineView.h; sourceTree = "<group>"; };
 		CCF3300126BBDE6500CAA5FC /* CCKLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineView.m; sourceTree = "<group>"; };
+		CCF3300326BBEE4700CAA5FC /* CCIndicatorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCIndicatorModel.h; sourceTree = "<group>"; };
+		CCF3300426BBEE4700CAA5FC /* CCIndicatorModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCIndicatorModel.m; sourceTree = "<group>"; };
+		CCF3300626BBF41900CAA5FC /* CCMinMaxModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMinMaxModel.h; sourceTree = "<group>"; };
+		CCF3300726BBF41900CAA5FC /* CCMinMaxModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMinMaxModel.m; sourceTree = "<group>"; };
 		E9F41BBA004A6B64194427F1 /* Pods-CCKLine-CCKLineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLine-CCKLineUITests.release.xcconfig"; path = "Target Support Files/Pods-CCKLine-CCKLineUITests/Pods-CCKLine-CCKLineUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +145,15 @@
 				A229098584A4AA1C632B83CD /* Pods-CCKLineTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CC1DDA1C26BCE2D2008B493F /* Variable */ = {
+			isa = PBXGroup;
+			children = (
+				CC1DDA1D26BCE2F1008B493F /* CCKLineGlobalVariable.h */,
+				CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */,
+			);
+			path = Variable;
 			sourceTree = "<group>";
 		};
 		CCF32F9726BA703400CAA5FC = {
@@ -223,6 +241,7 @@
 		CCF32FF226BBDCFF00CAA5FC /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				CC1DDA1C26BCE2D2008B493F /* Variable */,
 				CCF32FF326BBDCFF00CAA5FC /* Constant */,
 				CCF32FF526BBDCFF00CAA5FC /* Theme */,
 			);
@@ -253,6 +272,10 @@
 				CCF32FFB26BBDCFF00CAA5FC /* CCKLineModel.m */,
 				CCF32FFA26BBDCFF00CAA5FC /* CCKLineRootModel.h */,
 				CCF32FFC26BBDCFF00CAA5FC /* CCKLineRootModel.m */,
+				CCF3300326BBEE4700CAA5FC /* CCIndicatorModel.h */,
+				CCF3300426BBEE4700CAA5FC /* CCIndicatorModel.m */,
+				CCF3300626BBF41900CAA5FC /* CCMinMaxModel.h */,
+				CCF3300726BBF41900CAA5FC /* CCMinMaxModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -458,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF3300526BBEE4700CAA5FC /* CCIndicatorModel.m in Sources */,
 				CCF3300226BBDE6500CAA5FC /* CCKLineView.m in Sources */,
 				CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */,
 				CCF32FFD26BBDCFF00CAA5FC /* UIColor+CCKLine.m in Sources */,
@@ -468,6 +492,8 @@
 				CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
+				CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */,
+				CCF3300826BBF41900CAA5FC /* CCMinMaxModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
