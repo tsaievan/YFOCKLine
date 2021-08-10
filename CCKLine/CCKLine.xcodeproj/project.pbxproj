@@ -11,6 +11,7 @@
 		99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */; };
 		CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */; };
 		CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC451A6726C12221007C8FDA /* CCCandlePainter.m */; };
+		CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067AD26C215EA006829A3 /* CCMACDPainter.m */; };
 		CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FA426BA703400CAA5FC /* AppDelegate.m */; };
 		CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FAA26BA703400CAA5FC /* ViewController.m */; };
 		CCF32FAE26BA703400CAA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF32FAC26BA703400CAA5FC /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 		CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPainterProtocol.h; sourceTree = "<group>"; };
 		CC451A6626C12221007C8FDA /* CCCandlePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCandlePainter.h; sourceTree = "<group>"; };
 		CC451A6726C12221007C8FDA /* CCCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCandlePainter.m; sourceTree = "<group>"; };
+		CC7067AC26C215EA006829A3 /* CCMACDPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMACDPainter.h; sourceTree = "<group>"; };
+		CC7067AD26C215EA006829A3 /* CCMACDPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMACDPainter.m; sourceTree = "<group>"; };
 		CCF32FA026BA703400CAA5FC /* CCKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF32FA326BA703400CAA5FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF32FA426BA703400CAA5FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 		CC451A6426C121A1007C8FDA /* CCMACD */ = {
 			isa = PBXGroup;
 			children = (
+				CC7067AC26C215EA006829A3 /* CCMACDPainter.h */,
+				CC7067AD26C215EA006829A3 /* CCMACDPainter.m */,
 			);
 			path = CCMACD;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
 				CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */,
+				CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */,
 				CCF3300826BBF41900CAA5FC /* CCMinMaxModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
