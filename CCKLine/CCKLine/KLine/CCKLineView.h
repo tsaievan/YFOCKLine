@@ -13,5 +13,6 @@
 /// 数据
 @property (nonatomic, strong) CCKLineRootModel *rootModel;
 
-
+/// 重绘
+- (void)reDraw;
 @end

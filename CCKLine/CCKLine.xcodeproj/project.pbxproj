@@ -10,6 +10,7 @@
 		692AFFB49C80625D57F04282 /* libPods-CCKLineTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB2B844266C034271A925D3 /* libPods-CCKLineTests.a */; };
 		99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */; };
 		CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */; };
+		CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC451A6726C12221007C8FDA /* CCCandlePainter.m */; };
 		CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FA426BA703400CAA5FC /* AppDelegate.m */; };
 		CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FAA26BA703400CAA5FC /* ViewController.m */; };
 		CCF32FAE26BA703400CAA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF32FAC26BA703400CAA5FC /* Main.storyboard */; };
@@ -58,6 +59,9 @@
 		C03A88150CCDBF31659D97B4 /* Pods-CCKLineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCKLineTests.debug.xcconfig"; path = "Target Support Files/Pods-CCKLineTests/Pods-CCKLineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1DDA1D26BCE2F1008B493F /* CCKLineGlobalVariable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKLineGlobalVariable.h; sourceTree = "<group>"; };
 		CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineGlobalVariable.m; sourceTree = "<group>"; };
+		CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPainterProtocol.h; sourceTree = "<group>"; };
+		CC451A6626C12221007C8FDA /* CCCandlePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCandlePainter.h; sourceTree = "<group>"; };
+		CC451A6726C12221007C8FDA /* CCCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCandlePainter.m; sourceTree = "<group>"; };
 		CCF32FA026BA703400CAA5FC /* CCKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF32FA326BA703400CAA5FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF32FA426BA703400CAA5FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -156,6 +160,32 @@
 			path = Variable;
 			sourceTree = "<group>";
 		};
+		CC451A6226C118FE007C8FDA /* Painter */ = {
+			isa = PBXGroup;
+			children = (
+				CC451A6526C121BC007C8FDA /* CCCandle */,
+				CC451A6426C121A1007C8FDA /* CCMACD */,
+				CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */,
+			);
+			path = Painter;
+			sourceTree = "<group>";
+		};
+		CC451A6426C121A1007C8FDA /* CCMACD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CCMACD;
+			sourceTree = "<group>";
+		};
+		CC451A6526C121BC007C8FDA /* CCCandle */ = {
+			isa = PBXGroup;
+			children = (
+				CC451A6626C12221007C8FDA /* CCCandlePainter.h */,
+				CC451A6726C12221007C8FDA /* CCCandlePainter.m */,
+			);
+			path = CCCandle;
+			sourceTree = "<group>";
+		};
 		CCF32F9726BA703400CAA5FC = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +260,7 @@
 		CCF32FF126BBDCFF00CAA5FC /* KLine */ = {
 			isa = PBXGroup;
 			children = (
+				CC451A6226C118FE007C8FDA /* Painter */,
 				CCF32FF226BBDCFF00CAA5FC /* Config */,
 				CCF32FF826BBDCFF00CAA5FC /* Model */,
 				CCF3300026BBDE6500CAA5FC /* CCKLineView.h */,
@@ -481,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */,
 				CCF3300526BBEE4700CAA5FC /* CCIndicatorModel.m in Sources */,
 				CCF3300226BBDE6500CAA5FC /* CCKLineView.m in Sources */,
 				CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */,
