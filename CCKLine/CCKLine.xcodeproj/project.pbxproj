@@ -12,6 +12,7 @@
 		CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */; };
 		CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC451A6726C12221007C8FDA /* CCCandlePainter.m */; };
 		CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067AD26C215EA006829A3 /* CCMACDPainter.m */; };
+		CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067B126C22FF8006829A3 /* CCVerticalTextPainter.m */; };
 		CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FA426BA703400CAA5FC /* AppDelegate.m */; };
 		CCF32FAB26BA703400CAA5FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF32FAA26BA703400CAA5FC /* ViewController.m */; };
 		CCF32FAE26BA703400CAA5FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF32FAC26BA703400CAA5FC /* Main.storyboard */; };
@@ -65,6 +66,8 @@
 		CC451A6726C12221007C8FDA /* CCCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCandlePainter.m; sourceTree = "<group>"; };
 		CC7067AC26C215EA006829A3 /* CCMACDPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCMACDPainter.h; sourceTree = "<group>"; };
 		CC7067AD26C215EA006829A3 /* CCMACDPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCMACDPainter.m; sourceTree = "<group>"; };
+		CC7067B026C22FF8006829A3 /* CCVerticalTextPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCVerticalTextPainter.h; sourceTree = "<group>"; };
+		CC7067B126C22FF8006829A3 /* CCVerticalTextPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCVerticalTextPainter.m; sourceTree = "<group>"; };
 		CCF32FA026BA703400CAA5FC /* CCKLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCKLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF32FA326BA703400CAA5FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF32FA426BA703400CAA5FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,6 +169,7 @@
 		CC451A6226C118FE007C8FDA /* Painter */ = {
 			isa = PBXGroup;
 			children = (
+				CC7067AF26C22FBA006829A3 /* CCVerticalText */,
 				CC451A6526C121BC007C8FDA /* CCCandle */,
 				CC451A6426C121A1007C8FDA /* CCMACD */,
 				CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */,
@@ -189,6 +193,15 @@
 				CC451A6726C12221007C8FDA /* CCCandlePainter.m */,
 			);
 			path = CCCandle;
+			sourceTree = "<group>";
+		};
+		CC7067AF26C22FBA006829A3 /* CCVerticalText */ = {
+			isa = PBXGroup;
+			children = (
+				CC7067B026C22FF8006829A3 /* CCVerticalTextPainter.h */,
+				CC7067B126C22FF8006829A3 /* CCVerticalTextPainter.m */,
+			);
+			path = CCVerticalText;
 			sourceTree = "<group>";
 		};
 		CCF32F9726BA703400CAA5FC = {
@@ -527,6 +540,7 @@
 				CCF32FFE26BBDCFF00CAA5FC /* CCKLineModel.m in Sources */,
 				CCF32FA526BA703400CAA5FC /* AppDelegate.m in Sources */,
 				CCF32FE526BA8BA500CAA5FC /* CCChartSegmentView.m in Sources */,
+				CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
 				CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */,
