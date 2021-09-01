@@ -55,7 +55,9 @@
     /// 把模型加入缓存中
     self.cacheKLineData[@(self.currentIndex)] = rootModel;
     CCChartViewItemModel *itemModel = self.itemModels[self.currentIndex];
-    
+    self.kLineView.rootModel = rootModel;
+//    self.kLineView.linePainter = itemModel.centerViewType == CCKLineTypeTimeLine
+    [self.kLineView reDraw];
 }
 
 #pragma mark - CCChartSegmentViewDelegate
