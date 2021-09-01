@@ -11,6 +11,7 @@
 		99CF7C924BADAE6F27ADE239 /* libPods-CCKLine-CCKLineUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 67B8D50EB3CCD7296E21361C /* libPods-CCKLine-CCKLineUITests.a */; };
 		CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */; };
 		CC2F7EC726DF4F4A00C407B2 /* CCTimeLinePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7EC626DF4F4A00C407B2 /* CCTimeLinePainter.m */; };
+		CC2F7ECB26DF592300C407B2 /* CCRSIPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7ECA26DF592300C407B2 /* CCRSIPainter.m */; };
 		CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC451A6726C12221007C8FDA /* CCCandlePainter.m */; };
 		CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067AD26C215EA006829A3 /* CCMACDPainter.m */; };
 		CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067B126C22FF8006829A3 /* CCVerticalTextPainter.m */; };
@@ -64,6 +65,8 @@
 		CC1DDA1E26BCE2F1008B493F /* CCKLineGlobalVariable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKLineGlobalVariable.m; sourceTree = "<group>"; };
 		CC2F7EC526DF4F4A00C407B2 /* CCTimeLinePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTimeLinePainter.h; sourceTree = "<group>"; };
 		CC2F7EC626DF4F4A00C407B2 /* CCTimeLinePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTimeLinePainter.m; sourceTree = "<group>"; };
+		CC2F7EC926DF592300C407B2 /* CCRSIPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCRSIPainter.h; sourceTree = "<group>"; };
+		CC2F7ECA26DF592300C407B2 /* CCRSIPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCRSIPainter.m; sourceTree = "<group>"; };
 		CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPainterProtocol.h; sourceTree = "<group>"; };
 		CC451A6626C12221007C8FDA /* CCCandlePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCandlePainter.h; sourceTree = "<group>"; };
 		CC451A6726C12221007C8FDA /* CCCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCandlePainter.m; sourceTree = "<group>"; };
@@ -178,9 +181,19 @@
 			path = CCTimeLine;
 			sourceTree = "<group>";
 		};
+		CC2F7EC826DF591400C407B2 /* CCRSI */ = {
+			isa = PBXGroup;
+			children = (
+				CC2F7EC926DF592300C407B2 /* CCRSIPainter.h */,
+				CC2F7ECA26DF592300C407B2 /* CCRSIPainter.m */,
+			);
+			path = CCRSI;
+			sourceTree = "<group>";
+		};
 		CC451A6226C118FE007C8FDA /* Painter */ = {
 			isa = PBXGroup;
 			children = (
+				CC2F7EC826DF591400C407B2 /* CCRSI */,
 				CC2F7EC426DF4F2C00C407B2 /* CCTimeLine */,
 				CC7067AF26C22FBA006829A3 /* CCVerticalText */,
 				CC451A6526C121BC007C8FDA /* CCCandle */,
@@ -557,6 +570,7 @@
 				CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
 				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
+				CC2F7ECB26DF592300C407B2 /* CCRSIPainter.m in Sources */,
 				CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */,
 				CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */,
 				CCF3300826BBF41900CAA5FC /* CCMinMaxModel.m in Sources */,
