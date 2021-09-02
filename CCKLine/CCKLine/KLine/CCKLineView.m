@@ -59,7 +59,9 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     if (self = [super initWithFrame:frame]) {
         self.mainViewRatio = [CCKLineGlobalVariable kLineMainViewRatio];
         self.volumeViewRatio = [CCKLineGlobalVariable kLineVolumeViewRatio];
-        
+        self.indicator1Painter = CCMACDPainter.class;
+        self.indicator2Painter = CCMACDPainter.class;
+        [self initUI];
     }
     return self;
 }
@@ -187,9 +189,11 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     
     NSArray *arr;
     if (self.needDrawStartIndex < self.rootModel.models.count) {
-        arr = [self.rootModel.models subarrayWithRange:NSMakeRange(self.needDrawStartIndex, needDrawKLineCount)];
-    }else {
-        arr = [self.rootModel.models subarrayWithRange:NSMakeRange(self.needDrawStartIndex, self.rootModel.models.count - self.needDrawStartIndex)];
+        if (self.needDrawStartIndex + needDrawKLineCount < self.rootModel.models.count) {
+            arr = [self.rootModel.models subarrayWithRange:NSMakeRange(self.needDrawStartIndex, needDrawKLineCount)];
+        }else {
+            arr = [self.rootModel.models subarrayWithRange:NSMakeRange(self.needDrawStartIndex, self.rootModel.models.count - self.needDrawStartIndex)];
+        }
     }
     [self drawWithModels:arr];
 }
