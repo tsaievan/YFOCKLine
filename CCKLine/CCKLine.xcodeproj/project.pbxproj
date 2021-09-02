@@ -18,6 +18,7 @@
 		CC2F7EDB26DF71E200C407B2 /* CCEMAPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7EDA26DF71E200C407B2 /* CCEMAPainter.m */; };
 		CC2F7EDF26DF7B8F00C407B2 /* CCVolPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7EDE26DF7B8F00C407B2 /* CCVolPainter.m */; };
 		CC2F7EE326DF834D00C407B2 /* CCWRPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7EE226DF834D00C407B2 /* CCWRPainter.m */; };
+		CC2F7EE726E0A7CA00C407B2 /* CCKDJPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F7EE626E0A7CA00C407B2 /* CCKDJPainter.m */; };
 		CC451A6826C12221007C8FDA /* CCCandlePainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC451A6726C12221007C8FDA /* CCCandlePainter.m */; };
 		CC7067AE26C215EA006829A3 /* CCMACDPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067AD26C215EA006829A3 /* CCMACDPainter.m */; };
 		CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7067B126C22FF8006829A3 /* CCVerticalTextPainter.m */; };
@@ -85,6 +86,8 @@
 		CC2F7EDE26DF7B8F00C407B2 /* CCVolPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCVolPainter.m; sourceTree = "<group>"; };
 		CC2F7EE126DF834D00C407B2 /* CCWRPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCWRPainter.h; sourceTree = "<group>"; };
 		CC2F7EE226DF834D00C407B2 /* CCWRPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCWRPainter.m; sourceTree = "<group>"; };
+		CC2F7EE526E0A7CA00C407B2 /* CCKDJPainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCKDJPainter.h; sourceTree = "<group>"; };
+		CC2F7EE626E0A7CA00C407B2 /* CCKDJPainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCKDJPainter.m; sourceTree = "<group>"; };
 		CC451A6326C11A64007C8FDA /* CCPainterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCPainterProtocol.h; sourceTree = "<group>"; };
 		CC451A6626C12221007C8FDA /* CCCandlePainter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCCandlePainter.h; sourceTree = "<group>"; };
 		CC451A6726C12221007C8FDA /* CCCandlePainter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCCandlePainter.m; sourceTree = "<group>"; };
@@ -262,9 +265,19 @@
 			path = CCWR;
 			sourceTree = "<group>";
 		};
+		CC2F7EE426E0A7B000C407B2 /* CCKDJ */ = {
+			isa = PBXGroup;
+			children = (
+				CC2F7EE526E0A7CA00C407B2 /* CCKDJPainter.h */,
+				CC2F7EE626E0A7CA00C407B2 /* CCKDJPainter.m */,
+			);
+			path = CCKDJ;
+			sourceTree = "<group>";
+		};
 		CC451A6226C118FE007C8FDA /* Painter */ = {
 			isa = PBXGroup;
 			children = (
+				CC2F7EE426E0A7B000C407B2 /* CCKDJ */,
 				CC2F7EE026DF833100C407B2 /* CCWR */,
 				CC2F7EDC26DF7B7700C407B2 /* CCVol */,
 				CC2F7ED826DF71C800C407B2 /* CCEMA */,
@@ -651,6 +664,7 @@
 				CC7067B226C22FF8006829A3 /* CCVerticalTextPainter.m in Sources */,
 				CC2F7ECF26DF5F3500C407B2 /* CCBOLLPainter.m in Sources */,
 				CCF32FB626BA703500CAA5FC /* main.m in Sources */,
+				CC2F7EE726E0A7CA00C407B2 /* CCKDJPainter.m in Sources */,
 				CCF32FE226BA8A4300CAA5FC /* CCChartView.m in Sources */,
 				CC2F7ECB26DF592300C407B2 /* CCRSIPainter.m in Sources */,
 				CC1DDA1F26BCE2F1008B493F /* CCKLineGlobalVariable.m in Sources */,
