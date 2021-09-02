@@ -10,6 +10,15 @@
 #import <Masonry/Masonry.h>
 #import "CCKLineView.h"
 #import "CCKLineConstant.h"
+#import "CCMACDPainter.h"
+#import "CCRSIPainter.h"
+#import "CCKDJPainter.h"
+#import "CCWRPainter.h"
+#import "CCMAPainter.h"
+#import "CCEMAPainter.h"
+#import "CCBOLLPainter.h"
+#import "CCTimeLinePainter.h"
+#import "CCCandlePainter.h"
 
 @interface CCChartView () <CCChartSegmentViewDelegate>
 
@@ -30,6 +39,19 @@
 - (instancetype)initWithItemModels:(NSArray *)itemModels {
     if (self = [super init]) {
         self.backgroundColor = UIColor.backgroundColor;
+        self.cacheKLineData = @{}.mutableCopy;
+        [self initUI];
+        self.itemModels = itemModels;
+        NSMutableArray *items = [NSMutableArray array];
+        for (CCChartViewItemModel *item in self.itemModels) {
+            [items addObject:item.title];
+        }
+        self.segmentView.items = items;
+        CCChartViewItemModel *firstModel = self.itemModels.firstObject;
+        self.currentCenterViewType = firstModel.centerViewType;
+        if (self.dataSource) {
+            self.segmentView.selectedIndex = 4;
+        }
     }
     return self;
 }
@@ -56,7 +78,7 @@
     self.cacheKLineData[@(self.currentIndex)] = rootModel;
     CCChartViewItemModel *itemModel = self.itemModels[self.currentIndex];
     self.kLineView.rootModel = rootModel;
-//    self.kLineView.linePainter = itemModel.centerViewType == CCKLineTypeTimeLine
+    self.kLineView.linePainter = itemModel.centerViewType == CCKLineTypeTimeLine ? CCTimeLinePainter.class : CCCandlePainter.class;
     [self.kLineView reDraw];
 }
 
@@ -64,10 +86,43 @@
 - (void)chartSegmentView:(CCChartSegmentView *)segmentView clickSegmentButtonIndex:(NSInteger)index {
     self.currentIndex = index;
     if (index >= 100) {
-        
+        switch (index) {
+            case CCKLineIndicatorMACD:
+                self.kLineView.indicator2Painter = CCMACDPainter.class;
+                break;
+            case CCKLineIndicatorRSI:
+                self.kLineView.indicator2Painter = CCRSIPainter.class;
+                break;
+            case CCKLineIndicatorKDJ:
+                self.kLineView.indicator2Painter = CCKDJPainter.class;
+                break;
+            case CCKLineIndicatorWR:
+                self.kLineView.indicator2Painter = CCWRPainter.class;
+                break;
+            case CCKLineIndicatorMA:
+                self.kLineView.indicator2Painter = CCMAPainter.class;
+                break;
+            case CCKLineIndicatorEMA:
+                self.kLineView.indicator2Painter = CCEMAPainter.class;
+                break;
+            case CCKLineIndicatorBOLL:
+                self.kLineView.indicator2Painter = CCBOLLPainter.class;
+                break;
+            default:
+                self.kLineView.indicator1Painter = nil;
+                break;
+        }
+        [self.kLineView reDraw];
+        [self bringSubviewToFront:self.segmentView];
     }
     else {
-        
+        if (self.cacheKLineData[@(index)]) {
+            [self reloadWithData:self.cacheKLineData[@(index)]];
+        }else {
+            if (self.dataSource && [self.dataSource respondsToSelector:@selector(stockDatasWithIndex:)]) {
+                [self.dataSource stockDatasWithIndex:index];
+            }
+        }
     }
 }
 
@@ -75,6 +130,11 @@
 
 @implementation CCChartViewItemModel
 
-
++ (instancetype)itemModelWithTitle:(NSString *)title type:(CCKLineType)type {
+    CCChartViewItemModel *itemModel = [[CCChartViewItemModel alloc] init];
+    itemModel.title = title;
+    itemModel.centerViewType = type;
+    return itemModel;
+}
 
 @end

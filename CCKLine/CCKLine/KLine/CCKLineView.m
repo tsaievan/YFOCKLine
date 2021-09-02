@@ -10,6 +10,10 @@
 #import "CCKLineGlobalVariable.h"
 #import "UIColor+CCKLine.h"
 #import "CCMinMaxModel.h"
+#import "CCTimePainter.h"
+#import "CCVerticalTextPainter.h"
+#import "CCVolPainter.h"
+#import "CCMACDPainter.h"
 
 @interface CCKLineView () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -162,7 +166,13 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
 #pragma mark - 重绘
 - (void)reDraw {
     dispatch_main_async_safe(^{
-        
+        CGFloat kLineViewWidth = self.rootModel.models.count * [CCKLineGlobalVariable kLineWidth] + (self.rootModel.models.count + 1) * [CCKLineGlobalVariable kLineGap] + 10;
+        [self updateScrollViewContentSize];
+        CGFloat offset = kLineViewWidth - self.scrollView.frame.size.width;
+        self.scrollView.contentOffset  = CGPointMake(MAX(offset, 0), 0);
+        if (offset == self.oldContentOffsetX) {
+            [self calculateNeedDrawModels];
+        }
     });
 }
 
@@ -189,7 +199,67 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
         return;
     }
     CCMinMaxModel *minMax = [[CCMinMaxModel alloc] init];
-    minMax.min = 9999999999999.f;
+    minMax.min = CGFLOAT_MAX;
+    [minMax combine:[self.linePainter getMinMaxValue:models]];
+    if (self.indicator1Painter) {
+        [minMax combine:[self.indicator1Painter getMinMaxValue: models]];
+    }
+    /// 移除旧的layer
+    self.painterView.layer.sublayers = nil;
+    self.rightView.layer.sublayers = nil;
+    
+    CGFloat offsetX = models.firstObject.index * (CCKLineGlobalVariable.kLineWidth + CCKLineGlobalVariable.kLineGap) - self.scrollView.contentOffset.x;
+    CGRect mainArea = CGRectMake(offsetX, 20, CGRectGetWidth(self.painterView.bounds), CGRectGetHeight(self.painterView.bounds) * self.mainViewRatio - 40);
+    CGRect secondArea = CGRectMake(offsetX, CGRectGetMaxY(mainArea) + 20, CGRectGetWidth(mainArea), CGRectGetHeight(self.painterView.bounds) * self.volumeViewRatio);
+    CGRect thirdArea = CGRectMake(offsetX, CGRectGetMaxY(secondArea) + 20, CGRectGetWidth(mainArea), CGRectGetHeight(self.painterView.bounds) * (1 - self.mainViewRatio - self.volumeViewRatio) - 20);
+    
+    /// 时间轴
+    [CCTimePainter drawToLayer:self.painterView.layer area:CGRectMake(offsetX, CGRectGetMaxY(mainArea), CGRectGetWidth(mainArea) + 20, 20) models:models minMax:minMax];
+    /// 右侧价格轴
+    [CCVerticalTextPainter drawToLayer:self.rightView.layer area:CGRectMake(0, 20, CCKLineLinePriceViewWidth, CGRectGetHeight(mainArea)) minMax:minMax];
+    /// 右侧成交量轴
+    [CCVerticalTextPainter drawToLayer:self.rightView.layer area:CGRectMake(0, CGRectGetMaxY(mainArea) + 20, CCKLineLinePriceViewWidth, CGRectGetHeight(secondArea)) minMax:[CCVolPainter getMinMaxValue:models]];
+    /// 右侧副图
+    [CCVerticalTextPainter drawToLayer:self.rightView.layer area:CGRectMake(0, thirdArea.origin.y, CCKLineLinePriceViewWidth, CGRectGetHeight(thirdArea)) minMax:[CCMACDPainter getMinMaxValue:models]];
+    
+    /// 主图
+    [self.linePainter drawToLayer:self.painterView.layer area:mainArea models:models minMax: minMax];
+    /// 主图指标图
+    if (self.indicator1Painter) {
+        [self.indicator1Painter drawToLayer:self.painterView.layer area:mainArea models:models minMax: minMax];
+    }
+    /// 成交量图
+    [CCVolPainter drawToLayer:self.painterView.layer area:thirdArea models:models minMax:[self.indicator2Painter getMinMaxValue:models]];
+    /// 副图指标
+    [self.indicator2Painter drawToLayer:self.painterView.layer area:thirdArea models:models minMax:[self.indicator2Painter getMinMaxValue:models]];
+    /// 文字
+    [self updateLabelText:models.lastObject];
+}
+
+- (void)updateLabelText:(CCKLineModel *)m {
+    if (self.indicator1Painter) {
+        self.topLabel.attributedText = [self.indicator1Painter getText:m];
+    }else {
+        self.topLabel.attributedText = m.V_Price;
+    }
+    self.middleLabel.attributedText = m.V_Volume;
+    self.bottomLabel.attributedText = [self.indicator2Painter getText:m];
+}
+
+- (void)updateScrollViewContentSize {
+    CGFloat contentSizeW = self.rootModel.models.count * [CCKLineGlobalVariable kLineWidth] + (self.rootModel.models.count - 1) * [CCKLineGlobalVariable kLineGap];
+    self.scrollView.contentSize = CGSizeMake(contentSizeW, self.scrollView.contentSize.height);
+}
+
+#pragma mark - UIScrollView代理
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (self.scrollView.contentOffset.x < 0) {
+        self.painterViewXConstraint.offset = 0;
+    }else {
+        self.painterViewXConstraint.offset = scrollView.contentOffset.x;
+    }
+    self.oldContentOffsetX = self.scrollView.contentOffset.x;
+    [self calculateNeedDrawModels];
 }
 
 @end
