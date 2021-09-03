@@ -14,6 +14,7 @@
 #import "CCVerticalTextPainter.h"
 #import "CCVolPainter.h"
 #import "CCMACDPainter.h"
+#import "CCMAPainter.h"
 
 @interface CCKLineView () <UIScrollViewDelegate>
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -59,7 +60,7 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     if (self = [super initWithFrame:frame]) {
         self.mainViewRatio = [CCKLineGlobalVariable kLineMainViewRatio];
         self.volumeViewRatio = [CCKLineGlobalVariable kLineVolumeViewRatio];
-        self.indicator1Painter = CCMACDPainter.class;
+        self.indicator1Painter = CCMAPainter.class;
         self.indicator2Painter = CCMACDPainter.class;
         [self initUI];
     }
