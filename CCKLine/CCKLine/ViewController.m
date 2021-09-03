@@ -18,12 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (IBAction)jumpToKLine:(UIButton *)sender {
     CCChartViewController *stockChartVc = [[CCChartViewController alloc] init];
     stockChartVc.modalPresentationStyle = UIModalPresentationOverFullScreen;
     [self presentViewController:stockChartVc animated:YES completion:nil];
 }
-
 
 @end
