@@ -270,9 +270,58 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     }
 }
 
-
+#pragma mark - 缩放执行方法
 - (void)event_pinchMethod:(UIPinchGestureRecognizer *)pinch {
+    if (pinch.state == UIGestureRecognizerStateBegan) {
+        self.scrollView.scrollEnabled = NO;
+        CGPoint p1 = [pinch locationOfTouch:0 inView:self.painterView];
+        CGPoint p2 = [pinch locationOfTouch:1 inView:self.painterView];
+        self.pinchCenterX = (p1.x + p2.x) / 2;
+        self.pinchIndex = ABS(floor((self.pinchCenterX + self.scrollView.contentOffset.x) / [CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap]));
+    }
     
+    if (pinch.state == UIGestureRecognizerStateEnded) {
+        self.scrollView.scrollEnabled = YES;
+    }
+    
+    static CGFloat oldScale = 1.0f;
+    CGFloat difValue = pinch.scale - oldScale;
+    if (ABS(difValue) > CCKLineScaleBound) {
+        CGFloat oldKLineWidth = [CCKLineGlobalVariable kLineWidth];
+        CGFloat newKLineWidth = oldKLineWidth * (difValue > 0 ? (1 + CCKLineScaleFactor) : (1 - CCKLineScaleFactor));
+        if (oldKLineWidth == CCKLineLineMinWidth && difValue <= 0) {
+            return;
+        }
+        /// 右侧已经没有更多数据时, 从右侧开始缩放
+        if (((CGRectGetWidth(self.scrollView.bounds) - self.pinchCenterX) / (newKLineWidth + [CCKLineGlobalVariable kLineGap])) > self.rootModel.models.count - self.pinchIndex) {
+            self.pinchIndex = self.rootModel.models.count - 1;
+            self.pinchCenterX = CGRectGetWidth(self.scrollView.bounds);
+        }
+        
+        /// 左侧已经没有更多数据时, 从左侧开始缩放
+        if (self.pinchIndex * (newKLineWidth + [CCKLineGlobalVariable kLineGap]) < self.pinchCenterX) {
+            self.pinchIndex = 0;
+            self.pinchCenterX = 0;
+        }
+        
+        /// 数量很少, 少于一屏时, 从左侧开始缩放
+        if ((CGRectGetWidth(self.scrollView.bounds) / (newKLineWidth + [CCKLineGlobalVariable kLineGap])) > self.rootModel.models.count) {
+            self.pinchIndex = 0;
+            self.pinchCenterX = 0;
+        }
+        
+        [CCKLineGlobalVariable setKLineWidth:newKLineWidth];
+        oldScale = pinch.scale;
+        NSInteger idx = self.pinchIndex - floor(self.pinchCenterX / ([CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap]));
+        CGFloat offset = idx * ([CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap]);
+        [self.rootModel calculateNeedDrawTimeModel];
+        [self updateScrollViewContentSize];
+        self.scrollView.contentOffset = CGPointMake(offset, 0);
+        /// scrollView的contentSize小于frame时, 不会触发scrollView代理, 需要手动调用
+        if (self.scrollView.contentSize.width < self.scrollView.bounds.size.width) {
+            [self scrollViewDidScroll:self.scrollView];
+        }
+    }
 }
 
 - (void)updateLabelText:(CCKLineModel *)m {
