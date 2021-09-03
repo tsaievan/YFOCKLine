@@ -241,6 +241,40 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
     [self updateLabelText:models.lastObject];
 }
 
+#pragma mark - 长按手势执行方法
+- (void)event_longPressMethod:(UILongPressGestureRecognizer *)longPress {
+    static CGFloat oldPositionX = 0;
+    if (UIGestureRecognizerStateChanged == longPress.state || UIGestureRecognizerStateBegan == longPress.state) {
+        CGPoint location = [longPress locationInView:self.scrollView];
+        if (ABS(oldPositionX - location.x) < ([CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap]) / 2) {
+            return;
+        }
+        /// 暂停滑动
+        self.scrollView.scrollEnabled = NO;
+        oldPositionX = location.x;
+        NSInteger idx = ABS(floor(location.x / ([CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap])));
+        idx = MIN(idx, self.rootModel.models.count - 1);
+        [self updateLabelText:self.rootModel.models[idx]];
+        [self.verticalView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(@(idx * ([CCKLineGlobalVariable kLineWidth] + [CCKLineGlobalVariable kLineGap]) + [CCKLineGlobalVariable kLineWidth] / 2.f));
+        }];
+        [self.verticalView layoutIfNeeded];
+        self.verticalView.hidden = NO;
+    }
+    if (longPress.state == UIGestureRecognizerStateEnded) {
+        /// 取消竖线
+        self.verticalView.hidden = YES;
+        oldPositionX = 0;
+        self.scrollView.scrollEnabled = YES;
+        [self updateLabelText:self.rootModel.models.lastObject];
+    }
+}
+
+
+- (void)event_pinchMethod:(UIPinchGestureRecognizer *)pinch {
+    
+}
+
 - (void)updateLabelText:(CCKLineModel *)m {
     if (self.indicator1Painter) {
         self.topLabel.attributedText = [self.indicator1Painter getText:m];
