@@ -233,7 +233,7 @@ static void dispatch_main_async_safe(dispatch_block_t block) {
         [self.indicator1Painter drawToLayer:self.painterView.layer area:mainArea models:models minMax: minMax];
     }
     /// 成交量图
-    [CCVolPainter drawToLayer:self.painterView.layer area:thirdArea models:models minMax:[self.indicator2Painter getMinMaxValue:models]];
+    [CCVolPainter drawToLayer:self.painterView.layer area:secondArea models:models minMax:[self.indicator2Painter getMinMaxValue:models]];
     /// 副图指标
     [self.indicator2Painter drawToLayer:self.painterView.layer area:thirdArea models:models minMax:[self.indicator2Painter getMinMaxValue:models]];
     /// 文字
