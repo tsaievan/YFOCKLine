@@ -27,6 +27,7 @@
         model.Volume = item[@"v"];
         model.prevModel = mArr.lastObject;
         [mArr addObject:model];
+        index++;
     }
     groupModel.models = [mArr copy];
     [groupModel calculateIndicators:CCKLineIndicatorMACD];
