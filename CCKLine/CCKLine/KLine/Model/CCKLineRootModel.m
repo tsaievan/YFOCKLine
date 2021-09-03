@@ -37,6 +37,7 @@
     [groupModel calculateIndicators:CCKLineIndicatorBOLL];
     [groupModel calculateIndicators:CCKLineIndicatorWR];
     [groupModel calculateIndicators:CCKLineIndicatorEMA];
+    [groupModel calculateNeedDrawTimeModel];
     return groupModel;
 }
 
